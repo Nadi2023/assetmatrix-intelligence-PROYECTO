@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import { manejadorErrores } from './middlewares/error.middleware.js'
+import stocksRoutes from './routes/stocks.routes.js'
 
 // Habilitamos las variables de entorno para todo el proyecto
 dotenv.config()
@@ -16,6 +17,9 @@ app.use(express.json())
 app.get('/', (req, res) => {
   res.status(200).send({ exito: true, mensaje: 'AssetMatrix Intelligence API operativa' })
 })
+
+// Rutas de los modulos
+app.use('/stocks', stocksRoutes)
 
 // Manejo de rutas no existentes (404)
 app.use((req, res) => {
