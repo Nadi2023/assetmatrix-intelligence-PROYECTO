@@ -1,0 +1,27 @@
+services:
+  api:
+    build: .
+    container_name: assetmatrix-api
+    # Exponemos el 3005 en la maquina, mapeado al 3000 interno de la API
+    ports:
+      - "3005:3000"
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+
+  # El servicio DEBE llamarse "mongo" porque MONGO_HOSTNAME=mongo en el .env
+  mongo:
+    image: mongo:7
+    container_name: assetmatrix-mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DB}
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
