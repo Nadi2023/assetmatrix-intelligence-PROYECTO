@@ -1,9 +1,0 @@
-[33m20c6439[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Merge pull request #3 from Nadi2023/feature/modulo-crypto
-[33md2eab68[m[33m ([m[1;31morigin/feature/modulo-crypto[m[33m, [m[1;32mfeature/modulo-crypto[m[33m)[m [ADD] Endpoints del modulo de crypto con logica de portafolio y analytics
-[33m5cc57f6[m [ADD] Pruebas unitarias del modulo de crypto siguiendo el flujo TDD
-[33m0699875[m[33m ([m[1;32mdevelop[m[33m)[m Merge pull request #2 from Nadi2023/feature/modulo-stocks
-[33m085419a[m[33m ([m[1;31morigin/feature/modulo-stocks[m[33m, [m[1;32mfeature/modulo-stocks[m[33m)[m [ADD] Endpoints del modulo de stocks con capas de servicio, controlador y validacion
-[33m1b6f416[m [ADD] Pruebas unitarias del modulo de stocks siguiendo el flujo TDD
-[33me81e06a[m Merge pull request #1 from Nadi2023/feature/configuracion-tdd
-[33mf6a92b6[m[33m ([m[1;31morigin/feature/configuracion-tdd[m[33m, [m[1;32mfeature/configuracion-tdd[m[33m)[m [ADD] Configuracion de Jest y Supertest con separacion de app y servidor
-[33ma7c6916[m [ADD] Configuracion inicial del repositorio y estructura base del proyecto
