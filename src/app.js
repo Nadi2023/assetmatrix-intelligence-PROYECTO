@@ -3,6 +3,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import { manejadorErrores } from './middlewares/error.middleware.js'
 import stocksRoutes from './routes/stocks.routes.js'
+import cryptoRoutes from './routes/crypto.routes.js'
 
 // Habilitamos las variables de entorno para todo el proyecto
 dotenv.config()
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 
 // Rutas de los modulos
 app.use('/stocks', stocksRoutes)
+app.use('/crypto', cryptoRoutes)
 
 // Manejo de rutas no existentes (404)
 app.use((req, res) => {
