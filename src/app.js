@@ -6,6 +6,7 @@ import { especificacionSwagger } from './config/swagger.js'
 import { manejadorErrores } from './middlewares/error.middleware.js'
 import stocksRoutes from './routes/stocks.routes.js'
 import cryptoRoutes from './routes/crypto.routes.js'
+import { temaOscuro } from './config/swagger.theme.js'
 
 // Habilitamos las variables de entorno para todo el proyecto
 dotenv.config()
@@ -25,8 +26,16 @@ app.get('/', (req, res) => {
 app.use('/stocks', stocksRoutes)
 app.use('/crypto', cryptoRoutes)
 
-// Documentacion interactiva de la API (Swagger UI)
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(especificacionSwagger))
+
+// Documentacion interactiva de la API (Swagger UI) con tema personalizado
+app.use(
+  '/api-docs',
+  swaggerUi.serve,
+  swaggerUi.setup(especificacionSwagger, {
+    customCss: temaOscuro,
+    customSiteTitle: 'AssetMatrix Intelligence API Docs'
+  })
+)
 
 // Manejo de rutas no existentes (404)
 app.use((req, res) => {
