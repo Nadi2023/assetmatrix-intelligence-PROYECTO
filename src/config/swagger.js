@@ -13,6 +13,7 @@ const opciones = {
       title: 'AssetMatrix Intelligence API',
       version: '1.0.0',
       description:
+        'Ecosistema de Datos Financieros Globales y Criptograficos. ' +
         'API REST para el monitoreo global de activos bursatiles y criptograficos. ' +
         'Integra Alpha Vantage para mercados tradicionales y CoinGecko para activos digitales, ' +
         'con persistencia de carteras en MongoDB.'
